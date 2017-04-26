@@ -72,9 +72,7 @@
       if (data == "drag1") {
         if (ev.target.id == "1") {
           document.getElementById("Aries").innerHTML = "1";
-          if (ev.target.id == "2") {
-            document.getElementById("Aries").innerHTML = "1 2";
-          }
+
         } else if (ev.target.id == "2") {
           document.getElementById("Pisces").innerHTML = "1";
         } else if (ev.target.id == "3") {
@@ -395,11 +393,14 @@
 <body>
 
   <body id="top">
+    <!-- Header -->
     <div class="wrapper row1">
       <header id="header" class="hoc clear">
         <h1>Payakorn</h1>
       </header>
     </div>
+
+    <!-- Link to feature -->
     <div class="wrapper row4">
       <nav id="mainav" class="hoc clear">
         <ul class="clear">
@@ -412,249 +413,224 @@
         </ul>
       </nav>
     </div>
+
+    <!-- About Payakorn -->
     <div class="wrapper bgded overlay">
       <div id="pageintro" class="hoc clear">
-
         <h3 class="heading">About payakorn project </h3>
         <p>This project improve for forture telling. It for the people who likes the forecastion. This website will tell you about your Lakkana mapping, star zodiac and your personality. </p>
-
       </div>
     </div>
+
+    <!-- main body -->
+    <!-- ################################################################################################ -->
     <div class="wrapper row3">
       <main class="hoc container clear">
-        <!-- main body -->
-        <!-- ################################################################################################ -->
         <ul class="nospace group services">
+          <!-- Frature 1 Map to table -->
           <li class="one_third first">
             <article>
-              <i class="fa fa-clock-o">
-                                <asp:Image ImageUrl="~/App_Data/image/lakkana/TZodoacI.jpg" />
-                            </i>
+              <i class="fa fa-clock-o" style="background-image:url(App_Data/image/lakkana/TZodoacI.jpg); background-size:70%; background-repeat:no-repeat;background-position: center; "></i>
               <h6 class="heading">Translate Map to zodiac</h6>
               <p> This feature will interesting for the people who wants to know<img src="" alt="" /> the zodiac. It will provide the Lakkana mapping to the user and then the user just enter the information. Then, they will know the zodiac. </p>
-
+                  <img src="map.jpeg" style="width:500px;height:500px;">
+              <table align="center">
+                <tr>
+                  <td>
+                    <div align="left">
+                      <!--Drag-->
+                      <div id="items" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src="1.png" draggable="true" ondragstart="drag(event)" id="drag1" value="1" width="30" height="30">
+                        <img src="2.png" draggable="true" ondragstart="drag(event)" id="drag2" value="2" width="30" height="30">
+                        <img src="3.png" draggable="true" ondragstart="drag(event)" id="drag3" value="3" width="30" height="30">
+                        <img src="4.png" draggable="true" ondragstart="drag(event)" id="drag4" value="4" width="30" height="30">
+                        <img src="5.png" draggable="true" ondragstart="drag(event)" id="drag5" value="5" width="30" height="30">
+                        <img src="6.png" draggable="true" ondragstart="drag(event)" id="drag6" value="6" width="30" height="30">
+                        <img src="7.png" draggable="true" ondragstart="drag(event)" id="drag7" value="7" width="30" height="30">
+                        <img src="8.png" draggable="true" ondragstart="drag(event)" id="drag8" value="8" width="30" height="30">
+                        <img src="9.png" draggable="true" ondragstart="drag(event)" id="drag9" value="9" width="30" height="30">
+                        <img src="l.png" draggable="true" ondragstart="drag(event)" id="dragl" value="l" width="30" height="30">
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p>Drag Thai alphabet to Table</p>
+                  </td>
+                  <td>
+                    <table align="center">
+                      <!--Drop-->
+                      <tr>
+                        <td>
+                          <div id="11" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">11</div>
+                        </td>
+                        <td>
+                          <div id="12" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">12</div>
+                        </td>
+                        <td>
+                          <div id="1" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">1</div>
+                        </td>
+                        <td>
+                          <div id="2" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">2</div>
+                        </td>
+                        <td>
+                          <div id="3" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">3</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> </td>
+                        <td>
+                          <div id="10" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">10</div>
+                        </td>
+                        <td>
+                          <div id="13" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">13</div>
+                        </td>
+                        <td colspan="2">
+                          <div id="4" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">4</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div id="9" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">9</div>
+                        </td>
+                        <td>
+                          <div id="8" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">8</div>
+                        </td>
+                        <td>
+                          <div id="7" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">7</div>
+                        </td>
+                        <td>
+                          <div id="6" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">6</div>
+                        </td>
+                        <td>
+                          <div id="5" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">5</div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+          <br><br><br>
+          <table border="1px" align="center">
+            <tr>
+              <td>
+                Aries
+              </td>
+              <td>
+                <div id="Aries" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Pisces
+              </td>
+              <td>
+                <div id="Pisces" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Aquarius
+              </td>
+              <td>
+                <div id="Aquarius" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Capricorn
+              </td>
+              <td>
+                <div id="Capricorn" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Sagittarius
+              </td>
+              <td>
+                <div id="Sagittarius" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Scorpio
+              </td>
+              <td>
+                <div id="Scorpio" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Libra
+              </td>
+              <td>
+                <div id="Libra" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Virgo
+              </td>
+              <td>
+                <div id="Virgo" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Leo
+              </td>
+              <td>
+                <div id="Leo" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Cancer
+              </td>
+              <td>
+                <div id="Cancer" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Gemini
+              </td>
+              <td>
+                <div id="Gemini" class="Zodiac"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Taurus
+              </td>
+              <td>
+                <div id="Taurus" class="Zodiac"></div>
+              </td>
+            </tr>
+          </table>
             </article>
           </li>
+          <!--Feature 2 Table To Map -->
           <li class="one_third">
             <article>
               <i class="fa fa-clock-o"></i>
               <h6 class="heading">Translate zodiac to map</h6>
               <p> This feature will interesting for the people who wants to know thier Lakkana mapping.</p>
-              <form>
-                <div>
-                  <table align="center">
-                    <td>
-                      <img src="map.jpeg" style="width:500px;height:500px;">
-                      <!--image-->
-                    </td>
-                  </table>
-                  <table align="center">
-                    <tr>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div align="left">
-                          <!--Drag-->
-                          <div id="items" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            <img src="1.png" draggable="true" ondragstart="drag(event)" id="drag1" value="1" width="30" height="30">
-                            <img src="2.png" draggable="true" ondragstart="drag(event)" id="drag2" value="2" width="30" height="30">
-                            <img src="3.png" draggable="true" ondragstart="drag(event)" id="drag3" value="3" width="30" height="30">
-                            <img src="4.png" draggable="true" ondragstart="drag(event)" id="drag4" value="4" width="30" height="30">
-                            <img src="5.png" draggable="true" ondragstart="drag(event)" id="drag5" value="5" width="30" height="30">
-                            <img src="6.png" draggable="true" ondragstart="drag(event)" id="drag6" value="6" width="30" height="30">
-                            <img src="7.png" draggable="true" ondragstart="drag(event)" id="drag7" value="7" width="30" height="30">
-                            <img src="8.png" draggable="true" ondragstart="drag(event)" id="drag8" value="8" width="30" height="30">
-                            <img src="9.png" draggable="true" ondragstart="drag(event)" id="drag9" value="9" width="30" height="30">
-                            <img src="l.png" draggable="true" ondragstart="drag(event)" id="dragl" value="l" width="30" height="30">
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p>Drag Thai alphabet to Table</p>
-                      </td>
-                      <td>
-                        <table align="center">
-                          <!--Drop-->
-                          <tr>
-                            <td>
-                              <div id="11" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">11</div>
-                            </td>
-                            <td>
-                              <div id="12" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">12</div>
-                            </td>
-                            <td>
-                              <div id="1" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">1</div>
-                            </td>
-                            <td>
-                              <div id="2" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">2</div>
-                            </td>
-                            <td>
-                              <div id="3" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">3</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> </td>
-                            <td>
-                              <div id="10" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">10</div>
-                            </td>
-                            <td>
-                              <div id="13" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">13</div>
-                            </td>
-                            <td colspan="2">
-                              <div id="4" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">4</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div id="9" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">9</div>
-                            </td>
-                            <td>
-                              <div id="8" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">8</div>
-                            </td>
-                            <td>
-                              <div id="7" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">7</div>
-                            </td>
-                            <td>
-                              <div id="6" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">6</div>
-                            </td>
-                            <td>
-                              <div id="5" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">5</div>
-                            </td>
-                          </tr>
-                        </table>
-
-                      </td>
-
-                    </tr>
-                  </table>
-
-
-
-              </form>
-              <br>
-              <br>
-              <br>
-
-              <table border="1px" align="center">
-                <!--Zodiac Table-->
-                <tr>
-                  <td>
-                    Aries
-                  </td>
-                  <td>
-                    <div id="Aries" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Pisces
-                  </td>
-                  <td>
-                    <div id="Pisces" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Aquarius
-                  </td>
-                  <td>
-                    <div id="Aquarius" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Capricorn
-                  </td>
-                  <td>
-                    <div id="Capricorn" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Sagittarius
-                  </td>
-                  <td>
-                    <div id="Sagittarius" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Scorpio
-                  </td>
-                  <td>
-                    <div id="Scorpio" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Libra
-                  </td>
-                  <td>
-                    <div id="Libra" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Virgo
-                  </td>
-                  <td>
-                    <div id="Virgo" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Leo
-                  </td>
-                  <td>
-                    <div id="Leo" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Cancer
-                  </td>
-                  <td>
-                    <div id="Cancer" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Gemini
-                  </td>
-                  <td>
-                    <div id="Gemini" class="Zodiac"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Taurus
-                  </td>
-                  <td>
-                    <div id="Taurus" class="Zodiac"></div>
-                  </td>
-                </tr>
-              </table>
-
+              <!-- Add TON code hear -->
 
             </article>
           </li>
+          <!-- Ftature 3 View Map -->
           <li class="one_third">
             <article>
-
               <i class="fa fa-clock-o"></i>
-
               <h6 class="heading">View Lallana map </h6>
               <p>
                 <img src="App_Data/image/lakkana/LakkanaMap.jpg" />
               </p>
-
-
             </article>
           </li>
-
-
-
-
+          <!-- Feature 4 Route to  Google Map -->
           <li class="one_third">
             <article>
               <i class="fa fa-clock-o"></i>
@@ -698,6 +674,7 @@
 
             </article>
           </li>
+          <!-- Feature 5 VIEW PERSONALITY-->
           <li class="one_third">
             <article>
               <i class="fa fa-clock-o"></i>
@@ -823,6 +800,7 @@
 
             </article>
           </li>
+          <!-- Feature 6 Gypsy-->
           <li class="one_third">
             <article>
               <i class="fa fa-clock-o"></i>
@@ -952,8 +930,8 @@
       </td>
       <td>
         <div align="center">
-          <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">-
-            <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra3" value="3 width="80" height="100">
+          <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra3" value="3 width="80" height="100"">
           </div>
         </div>
       </td>
@@ -990,7 +968,7 @@
 
         </section>
       </div>
-
+      <!-- Feature 7 Visit CMU -->
       <div class="wrapper row4">
         <footer id="footer" class="hoc container clear">
           <div class="hoc container clear">
@@ -1015,6 +993,7 @@
 
         </footer>
       </div>
+      <!-- Footer -->
       <div class="wrapper row5">
         <div id="copyright" class="hoc clear">
           <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
@@ -1022,12 +1001,6 @@
         </div>
       </div>
       <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-      <!-- JAVASCRIPTS -->
-
-
-      <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-      <script src="~/Scripts/bootstrap.min.js"></script>
-
 
   </body>
 
