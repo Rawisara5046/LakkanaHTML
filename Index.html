@@ -1,0 +1,1034 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQr_DD_UjvhUX3GzIfXt6IRfKm4I_joF4&callback=initMap"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="Content/layout.css" rel="stylesheet" type="text/css" media="all">
+  <script src="Scripts/modernizr-2.6.2.js"></script>
+  <style>
+  #itemsCard{
+      width: 320px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    #tableCard{
+      width: 80px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    #items {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+
+    #Mapping {
+      background-image: url("map.jpeg");
+      background-size: 50%;
+      background-repeat: no-repeat;
+    }
+    .dropCard{
+      width: 80px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+
+    .drop {
+      width: 40px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+
+    .Zodiac {
+      width: 200px;
+      height: 20px;
+    }
+  </style>
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      //data = id from drag
+      //ev.target.id = id from drop
+      //document.write()
+      ev.target.appendChild(document.getElementById(data));
+      if (data == "drag1") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "1";
+          if (ev.target.id == "2") {
+            document.getElementById("Aries").innerHTML = "1 2";
+          }
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "1";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "1";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "1";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "1";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "1";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "1";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "1";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "1";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "1";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "1";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "1";
+        }
+      } else if (data == "drag2") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "2";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "2";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "2";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "2";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "2";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "2";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "2";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "2";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "2";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "2";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "2";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "2";
+        }
+      } else if (data == "drag3") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "3";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "3";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "3";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "3";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "3";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "3";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "3";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "3";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "3";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "3";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "3";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "3";
+        }
+      } else if (data == "drag4") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "4";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "4";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "4";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "4";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "4";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "4";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "4";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "4";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "4";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "4";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "4";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "4";
+        }
+      } else if (data == "drag5") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "5";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "5";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "5";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "5";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "5";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "5";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "5";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "5";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "5";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "5";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "5";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "5";
+        }
+      } else if (data == "drag6") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "6";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "6";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "6";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "6";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "6";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "6";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "6";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "6";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "6";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "6";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "6";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "6";
+        }
+      } else if (data == "drag7") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "7";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "7";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "7";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "7";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "7";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "7";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "7";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "7";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "7";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "7";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "7";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "7";
+        }
+      } else if (data == "drag8") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "8";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "8";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "8";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "8";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "8";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "8";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "8";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "8";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "8";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "8";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "8";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "8";
+        }
+      } else if (data == "drag9") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "9";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "9";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "9";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "9";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "9";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "9";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "9";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "9";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "9";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "9";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "9";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "9";
+        }
+      } else if (data == "drag10") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "10";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "10";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "10";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "10";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "10";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "10";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "10";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "10";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "10";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "10";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "10";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "10";
+        }
+      } else if (data == "drag11") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "11";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "11";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "11";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "11";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "11";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "11";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "11";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "11";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "11";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "11";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "11";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "11";
+        }
+      } else if (data == "drag12") {
+        if (ev.target.id == "1") {
+          document.getElementById("Aries").innerHTML = "12";
+        } else if (ev.target.id == "2") {
+          document.getElementById("Pisces").innerHTML = "12";
+        } else if (ev.target.id == "3") {
+          document.getElementById("Aquarius").innerHTML = "12";
+        } else if (ev.target.id == "4") {
+          document.getElementById("Capricorn").innerHTML = "12";
+        } else if (ev.target.id == "5") {
+          document.getElementById("Sagittarius").innerHTML = "12";
+        } else if (ev.target.id == "6") {
+          document.getElementById("Scorpio").innerHTML = "12";
+        } else if (ev.target.id == "7") {
+          document.getElementById("Libra").innerHTML = "12";
+        } else if (ev.target.id == "8") {
+          document.getElementById("Virgo").innerHTML = "12";
+        } else if (ev.target.id == "9") {
+          document.getElementById("Leo").innerHTML = "12";
+        } else if (ev.target.id == "10") {
+          document.getElementById("Cancer").innerHTML = "12";
+        } else if (ev.target.id == "11") {
+          document.getElementById("Gemini").innerHTML = "12";
+        } else if (ev.target.id == "12") {
+          document.getElementById("Taurus").innerHTML = "12";
+        }
+      }
+
+
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <body id="top">
+    <div class="wrapper row1">
+      <header id="header" class="hoc clear">
+        <h1>Payakorn</h1>
+      </header>
+    </div>
+    <div class="wrapper row4">
+      <nav id="mainav" class="hoc clear">
+        <ul class="clear">
+          <li>Translate Lakkana</li>
+          <li>Translate Zodiac</li>
+          <li>View Lakkana</li>
+          <li>Route to Lakkana</li>
+          <li>View personality</li>
+          <li>Visit CMU</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrapper bgded overlay">
+      <div id="pageintro" class="hoc clear">
+
+        <h3 class="heading">About payakorn project </h3>
+        <p>This project improve for forture telling. It for the people who likes the forecastion. This website will tell you about your Lakkana mapping, star zodiac and your personality. </p>
+
+      </div>
+    </div>
+    <div class="wrapper row3">
+      <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <ul class="nospace group services">
+          <li class="one_third first">
+            <article>
+              <i class="fa fa-clock-o">
+                                <asp:Image ImageUrl="~/App_Data/image/lakkana/TZodoacI.jpg" />
+                            </i>
+              <h6 class="heading">Translate Map to zodiac</h6>
+              <p> This feature will interesting for the people who wants to know<img src="" alt="" /> the zodiac. It will provide the Lakkana mapping to the user and then the user just enter the information. Then, they will know the zodiac. </p>
+
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+              <i class="fa fa-clock-o"></i>
+              <h6 class="heading">Translate zodiac to map</h6>
+              <p> This feature will interesting for the people who wants to know thier Lakkana mapping.</p>
+              <form>
+                <div>
+                  <table align="center">
+                    <td>
+                      <img src="map.jpeg" style="width:500px;height:500px;">
+                      <!--image-->
+                    </td>
+                  </table>
+                  <table align="center">
+                    <tr>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div align="left">
+                          <!--Drag-->
+                          <div id="items" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="1.png" draggable="true" ondragstart="drag(event)" id="drag1" value="1" width="30" height="30">
+                            <img src="2.png" draggable="true" ondragstart="drag(event)" id="drag2" value="2" width="30" height="30">
+                            <img src="3.png" draggable="true" ondragstart="drag(event)" id="drag3" value="3" width="30" height="30">
+                            <img src="4.png" draggable="true" ondragstart="drag(event)" id="drag4" value="4" width="30" height="30">
+                            <img src="5.png" draggable="true" ondragstart="drag(event)" id="drag5" value="5" width="30" height="30">
+                            <img src="6.png" draggable="true" ondragstart="drag(event)" id="drag6" value="6" width="30" height="30">
+                            <img src="7.png" draggable="true" ondragstart="drag(event)" id="drag7" value="7" width="30" height="30">
+                            <img src="8.png" draggable="true" ondragstart="drag(event)" id="drag8" value="8" width="30" height="30">
+                            <img src="9.png" draggable="true" ondragstart="drag(event)" id="drag9" value="9" width="30" height="30">
+                            <img src="l.png" draggable="true" ondragstart="drag(event)" id="dragl" value="l" width="30" height="30">
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p>Drag Thai alphabet to Table</p>
+                      </td>
+                      <td>
+                        <table align="center">
+                          <!--Drop-->
+                          <tr>
+                            <td>
+                              <div id="11" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">11</div>
+                            </td>
+                            <td>
+                              <div id="12" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">12</div>
+                            </td>
+                            <td>
+                              <div id="1" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">1</div>
+                            </td>
+                            <td>
+                              <div id="2" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">2</div>
+                            </td>
+                            <td>
+                              <div id="3" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">3</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> </td>
+                            <td>
+                              <div id="10" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">10</div>
+                            </td>
+                            <td>
+                              <div id="13" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">13</div>
+                            </td>
+                            <td colspan="2">
+                              <div id="4" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">4</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div id="9" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">9</div>
+                            </td>
+                            <td>
+                              <div id="8" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">8</div>
+                            </td>
+                            <td>
+                              <div id="7" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">7</div>
+                            </td>
+                            <td>
+                              <div id="6" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">6</div>
+                            </td>
+                            <td>
+                              <div id="5" class="drop" ondrop="drop(event,this)" ondragover="allowDrop(event)">5</div>
+                            </td>
+                          </tr>
+                        </table>
+
+                      </td>
+
+                    </tr>
+                  </table>
+
+
+
+              </form>
+              <br>
+              <br>
+              <br>
+
+              <table border="1px" align="center">
+                <!--Zodiac Table-->
+                <tr>
+                  <td>
+                    Aries
+                  </td>
+                  <td>
+                    <div id="Aries" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Pisces
+                  </td>
+                  <td>
+                    <div id="Pisces" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Aquarius
+                  </td>
+                  <td>
+                    <div id="Aquarius" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Capricorn
+                  </td>
+                  <td>
+                    <div id="Capricorn" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Sagittarius
+                  </td>
+                  <td>
+                    <div id="Sagittarius" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Scorpio
+                  </td>
+                  <td>
+                    <div id="Scorpio" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Libra
+                  </td>
+                  <td>
+                    <div id="Libra" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Virgo
+                  </td>
+                  <td>
+                    <div id="Virgo" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Leo
+                  </td>
+                  <td>
+                    <div id="Leo" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Cancer
+                  </td>
+                  <td>
+                    <div id="Cancer" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Gemini
+                  </td>
+                  <td>
+                    <div id="Gemini" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Taurus
+                  </td>
+                  <td>
+                    <div id="Taurus" class="Zodiac"></div>
+                  </td>
+                </tr>
+              </table>
+
+
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+
+              <i class="fa fa-clock-o"></i>
+
+              <h6 class="heading">View Lallana map </h6>
+              <p>
+                <img src="App_Data/image/lakkana/LakkanaMap.jpg" />
+              </p>
+
+
+            </article>
+          </li>
+
+
+
+
+          <li class="one_third">
+            <article>
+              <i class="fa fa-clock-o"></i>
+              <h2 style="font-family:courier ">ROUTE TO LAKKANA</h2>
+              <div id="map" style="width: 895px; height: 400px;"></div>
+              <script type="text/javascript">
+                var locations = [
+                  ['Wat Jed Yod', 18.808307, 98.971887, 1],
+                  ['Wat Phra That Doi Suthep', 18.804928, 98.922017, 2],
+                  ['Wat Phra Singh', 18.788584, 98.981357, 3],
+                  ['Wat Phra That Jom Thong', 18.421078, 98.679093, 4],
+                  ['Wat Ket Karam', 18.792238, 99.002822, 5]
+
+
+                ];
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 9,
+                  center: new google.maps.LatLng(18.788584, 98.981357),
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+
+                var infowindow = new google.maps.InfoWindow();
+
+                var marker, i;
+
+                for (i = 0; i < locations.length; i++) {
+                  marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                  });
+
+                  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                      infowindow.setContent(locations[i][0]);
+                      infowindow.open(map, marker);
+                    }
+                  })(marker, i));
+                }
+              </script>
+
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+              <i class="fa fa-clock-o"></i>
+              <h3 style="color:black">VIEW PERSONALITY</h3>
+              <script language="JavaScript">
+                function showInput() {
+
+                  var selectedanswer = document.getElementById("mySelect").selectedIndex;
+
+
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Aries") {
+                    greetin = "Aries";
+                    greeting = "mar 21-apr 20";
+                    greeting1 = "Adventurous, energetic, Pioneering, courageous, Enthusiastic, confident, Dynamic and quick-witted";
+                    greeting2 = "Selfish, quick-tempered, Impulsive, impatient, Foolhardy and daredevil";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Taurus") {
+                    greetin = "Taurus";
+                    greeting = "apr 21-may 21";
+                    greeting1 = "Patient, reliable, Warmhearted, loving, Persistent, determined, Placid and security loving";
+                    greeting2 = "Jealous, possessive, Resentful, inflexible, Self-indulgent and greedy";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Gemini") {
+                    greetin = "Gemini";
+                    greeting = "may 22-june 21";
+                    greeting1 = "Adaptable, versatile, Communicative, witty, Intellectual, eloquent, Youthful and lively";
+                    greeting2 = "Nervous, tense, Superficial, inconsistent, Cunning and inquisitive";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Cancer") {
+                    greetin = "Cancer";
+                    greeting = "june 22-july 22";
+                    greeting1 = "Emotional, loving, Intuitive, imaginative, Shrewd, cautious, Protective and sympathetic";
+                    greeting2 = "Changeable, moody, Overemotional, touchy, Clinging and unable to let go";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Leo") {
+                    greetin = "Leo";
+                    greeting = "july 23-aug 21";
+                    greeting1 = "Generous, warmhearted, Creative, enthusiastic, Broad-minded, expansive, Faithful and loving";
+                    greeting2 = "Pompous, patronizing, Bossy, interfering, Dogmatic and intolerant";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Virgo") {
+                    greetin = "Virgo";
+                    greeting = "aug 22-sep 23";
+                    greeting1 = "Modest, shy, Meticulous, reliable, Practical, diligent, Intelligent and analytical";
+                    greeting2 = "Fussy, a worrier, Overcritical, harsh, Perfectionist and conservative";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Libra") {
+                    greetin = "Libra";
+                    greeting = "sep 24-oct 23";
+                    greeting1 = "Diplomatic, urbane, Romantic, charming, Easygoing, sociable, Idealistic and peaceable";
+                    greeting2 = "Indecisive, changeable, Gullible, easily-influenced, Flirtatious and self-indulgent";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Scorpio") {
+                    greetin = "Scorpio";
+                    greeting = "oct 24-nov 22";
+                    greeting1 = "Determined, forceful, Emotional, intuitive, Powerful, passionate, Exciting and magnetic";
+                    greeting2 = "Jealous, resentful, Compulsive, obsessive, Secretive and obstinate";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Sagittarius") {
+                    greetin = "Sagittarius";
+                    greeting = "nov 23-dec 22";
+                    greeting1 = "Optimistic, freedom-loving, Jovial, good-humored, Honest, straightforward, Intellectual and philosophical";
+                    greeting2 = "Blindly-optimisti, careless, Irresponsible, superficial, Tactless and restless";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Capricorn") {
+                    greetin = "Capricorn";
+                    greeting = "dec 23-jan 20";
+                    greeting1 = "Practical, prudent, Ambitious, disciplined, careful, Patient, Humorous and reserved";
+                    greeting2 = "Pessimistic, fatalistic, Miserly and grudging";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Aquarius") {
+                    greetin = "Aquarius";
+                    greeting = "jan 21-feb 19";
+                    greeting1 = "Friendly, humanitarian, Honest, loyal, Original, inventive, Independent and intellectual";
+                    greeting2 = "Intractable, contrary, Perverse, unpredictable, Unemotional and detached";
+                  }
+                  if (document.getElementsByTagName("option")[selectedanswer].value == "Pisces") {
+                    greetin = "Pisces";
+                    greeting = "feb 20-mar 20";
+                    greeting1 = "Imaginative, sensitive, Compassionate, kind, Selfless, unworldly, Intuitive and sympathetic";
+                    greeting2 = "Escapist, idealistic, Secretive, vague, Weak-willed and easily-led";
+                  }
+
+
+
+
+                  document.getElementById("dem").innerHTML = greetin;
+                  document.getElementById("demo").innerHTML = greeting;
+                  document.getElementById("demo1").innerHTML = greeting1;
+                  document.getElementById("demo2").innerHTML = greeting2;
+                }
+              </script>
+              <form>
+                <div class="answer1wrap">
+                  <select id="mySelect" , style="width: 150px" ;>
+                                            <option value="void">Choose your zodiac</option>
+                                            <option value="Aries">Aries</option>
+                                            <option value="Taurus">Taurus</option>
+                                            <option value="Gemini">Gemini</option>
+                                            <option value="Cancer">Cancer</option>
+                                            <option value="Leo">Leo</option>
+                                            <option value="Virgo">Virgo</option>
+                                            <option value="Libra">Libra</option>
+                                            <option value="Scorpio">Scorpio</option>
+                                            <option value="Sagittarius">Sagittarius</option>
+                                            <option value="Capricorn">Capricorn</option>
+                                            <option value="Aquarius">Aquarius</option>
+                                            <option value="Pisces">Pisces</option>
+                                        </select>
+                  <button style="color:white" class="btn btn-default" id="checkbtn" onclick="showInput();" type="button"><span  class="glyphicon glyphicon-check"></span>Check</button>
+                </div>
+
+              </form>
+
+
+
+
+              <h1 style="color:black">Your personality </h1>
+              <h2 style="color:black" id="dem"></h2>
+              <p style="color:black" id="demo"></p>
+              <p style="color:black" id="demo1"></p>
+              <p style="color:black" id="demo2"></p>
+
+            </article>
+          </li>
+          <li class="one_third">
+            <article>
+              <i class="fa fa-clock-o"></i>
+              <h6 class="heading" style="color:black">Diary Holoscope</h6>
+              <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+      if(data =="dra1"){
+        a=Math.floor((Math.random() * 4) + 1);
+        if(a==1){
+          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if(a==2){
+          b="The bear symbolizes a male person with whom you today will have to do something. Be friendly to this person and do not not irritate him.";
+          c="You could create an insidious enemy, if you will not take care. If problems should arise trust an official person, and most of all you must believe in your own strength!";
+        }
+        if(a==3){
+          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if(a==4){
+          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+      }
+      if(data =="dra2"){
+        a=Math.floor((Math.random() * 4) + 1);
+        if(a==1){
+          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if(a==2){
+          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if(a==3){
+          b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+        if(a==4){
+          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+      }
+      if(data =="dra3"){
+        a=Math.floor((Math.random() * 4) + 1);
+        if(a==1){
+          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if(a==2){
+          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if(a==3){
+          b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+        if(a==4){
+          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+      }
+      if(data =="dra4"){
+        a=Math.floor((Math.random() * 4) + 1);
+        if(a==1){
+          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if(a==2){
+          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if(a==3){
+          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if(a==4){
+          b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+      }
+      document.getElementById("er").innerHTML = b;
+      document.getElementById("er1").innerHTML = c;
+    }
+    </script>
+      <div>
+        <table id="itemsCard" align="center">
+          <tr>
+            <td>
+              <h3 align="center" style="color:black">Card 1</h3>
+            </td>
+            <td>
+              <h3 align="center" style="color:black">Card 2</h3>
+            </td>
+            <td>
+              <h3 align="center" style="color:black">Card 3</h3>
+            </td>
+            <td>
+              <h3 align="center" style="color:black">Card 4</h3>
+            </td>
+          </tr>
+          <td>
+            <div align="center">
+              <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra1" value="1" width="80" height="100">
+              </div>
+            </div>
+          </td>
+          <td>
+      <div align="center">
+        <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra2" value="2" width="80" height="100">
+        </div>
+      </div>
+      </td>
+      <td>
+        <div align="center">
+          <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">-
+            <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra3" value="3 width="80" height="100">
+          </div>
+        </div>
+      </td>
+      <td>
+          <div align="center">
+            <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra4" value="4" width="80" height="100">
+            </div>
+          </div>
+        </td>
+      </table>
+      <p align="center" style="color:black">Drag your card here!</p>
+        <div align="center">
+        <div class="dropCard" ondrop="drop(event,this)" ondragover="allowDrop(event)"></div>
+      </div>
+
+    <p><br> </p>
+    <h3 align="center" style="color:black">What's you will found today....</h3>
+    <p align="center" id="er" style="color:black"></p>
+    <p align="center" id="er1" style="color:black"></p>
+    <FORM align="center">
+      <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+      </FORM>
+        </ul>
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+      </main>
+      </div>
+
+
+      <div class="wrapper bgded overlay">
+        <section class="hoc container clear">
+
+        </section>
+      </div>
+
+      <div class="wrapper row4">
+        <footer id="footer" class="hoc container clear">
+          <div class="hoc container clear">
+
+            <h1 class="col-centered">Visit CMU</h1>
+            <ul class="nospace btmspace-30 linklist">
+              <li>
+                <i class="fa fa-map-marker"></i>
+                <address>
+                                Chiang Mai University
+                                239, Huay Kaew Road, Muang District, Chiang Mai
+                                Thailand, 50200
+                            </address>
+              </li>
+              <li><i class="fa fa-phone"></i>Tel. 053-941300</li>
+              <li><i class="fa fa-envelope-o"></i>E-mail : prcmu239@gmail.com</li>
+              <li><i class="fa fa-envelope-o"></i><a href="https://www.http://www.cmu.ac.th/">Visit CMU Click here</a></li>
+            </ul>
+
+          </div>
+
+
+        </footer>
+      </div>
+      <div class="wrapper row5">
+        <div id="copyright" class="hoc clear">
+          <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
+          <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+        </div>
+      </div>
+      <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+      <!-- JAVASCRIPTS -->
+
+
+      <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+      <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+  </body>
+
+</html>

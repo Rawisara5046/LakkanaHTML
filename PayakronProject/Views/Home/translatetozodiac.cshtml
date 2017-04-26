@@ -1,0 +1,359 @@
+﻿@{
+    ViewBag.Title = "Translate lakkana to star zodiac";
+}
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQr_DD_UjvhUX3GzIfXt6IRfKm4I_joF4&callback=initMap">
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="~/Content/layout.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body>
+
+    <body>
+        <body id="top">
+            <div class="wrapper row1">
+                <header id="header" class="hoc clear">
+                    <h1>Translate lakkana to star zodiac </h1>
+                </header>
+            </div>
+
+            <div class="container"  >
+           
+                <p><strong>Select Day/Month/Year to translate</strong></p>
+                Day:<select name="Day">
+                        <option value="01" selected>01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                </select>
+                
+                Month:<select name="Month">
+                    <option value="01" selected>January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+
+               Year:<input name="Cyear" type="text" size="4" placeholder="Ex:2539" /><br/><br />
+                
+                <input type="submit" value="submit" />
+
+                <div class="jakdao" style="position: relative; width: 240px; height: 240px; margin-top :20px">
+                    <img src="~/App_Data/image/lakkana/jakdao.gif" style="width:240px;height:240px;" />
+
+                    <!-- start rasi 0 -->
+                    <div style="position: absolute; top: 80px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 80px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 60px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 60px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 40px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 40px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 125px">
+                    </div>
+                    <!-- end rasi 0 -->
+                    <!-- start rasi 1 -->
+                    <div style="position: absolute; top: 60px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 40px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 40px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 20px">
+                    </div>
+                    <!-- end rasi 1 -->
+                    <!-- start rasi 2 -->
+                    <div style="position: absolute; top: 75px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 55px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 75px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 35px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 55px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 75px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 15px; left: 00px">
+                    </div>
+                    <div style="position: absolute; top: 35px; left: 00px">
+                    </div>
+                    <div style="position: absolute; top: 55px; left: 00px">
+                    </div>
+                    <div style="position: absolute; top: 75px; left: 00px">
+                    </div>
+                    <!-- end rasi 2 -->
+                    <!-- start rasi 3 -->
+                    <div style="position: absolute; top: 100px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 00px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 00px">
+                    </div>
+                    <!-- end rasi 3 -->
+                    <!-- start rasi 4 -->
+                    <div style="position: absolute; top: 145px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 145px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 165px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 145px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 165px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 185px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 145px; left: 00px">
+                    </div>
+                    <div style="position: absolute; top: 165px; left: 00px">
+                    </div>
+                    <div style="position: absolute; top: 185px; left: 00px">
+                    </div>
+                    <div style="position: absolute; top: 205px; left: 00px">
+                    </div>
+                    <!-- end rasi 4 -->
+                    <!-- start rasi 5 -->
+                    <div style="position: absolute; top: 160px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 180px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 180px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 80px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 20px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 40px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 60px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 80px">
+                    </div>
+                    <!-- end rasi 5 -->
+                    <!-- start rasi 6 -->
+                    <div style="position: absolute; top: 140px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 140px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 160px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 160px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 180px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 180px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 125px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 105px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 125px">
+                    </div>
+                    <!-- end rasi 6 -->
+                    <!-- start rasi 7 -->
+                    <div style="position: absolute; top: 160px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 180px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 180px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 200px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 220px; left: 205px">
+                    </div>
+                    <!-- end rasi 7 -->
+                    <!-- start rasi 8 -->
+                    <div style="position: absolute; top: 145px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 145px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 165px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 145px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 165px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 185px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 145px; left: 225px">
+                    </div>
+                    <div style="position: absolute; top: 165px; left: 225px">
+                    </div>
+                    <div style="position: absolute; top: 185px; left: 225px">
+                    </div>
+                    <div style="position: absolute; top: 205px; left: 225px">
+                    </div>
+                    <!-- end rasi 8 -->
+                    <!-- start rasi 9 -->
+                    <div style="position: absolute; top: 100px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 100px; left: 225px">
+                    </div>
+                    <div style="position: absolute; top: 120px; left: 225px">
+                    </div>
+                    <!-- end rasi 9 -->
+                    <!-- start rasi 10 -->
+                    <div style="position: absolute; top: 75px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 55px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 75px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 35px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 55px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 75px; left: 205px">
+                    </div>
+                    <div style="position: absolute; top: 15px; left: 225px">
+                    </div>
+                    <div style="position: absolute; top: 35px; left: 225px">
+                    </div>
+                    <div style="position: absolute; top: 55px; left: 225px">
+                    </div>
+                    <div style="position: absolute; top: 75px; left: 225px">
+                    </div>
+                    <!-- end rasi 10 -->
+                    <!-- start rasi 11 -->
+                    <div style="position: absolute; top: 60px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 40px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 40px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 20px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 145px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 165px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 185px">
+                    </div>
+                    <div style="position: absolute; top: 00px; left: 205px">
+                    </div>
+                    <!-- end rasi 11 -->
+                    </div>
+                    
+
+
+
+
+
+
+                </div>
+
+                </article>
+</body>
+

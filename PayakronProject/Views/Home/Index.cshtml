@@ -1,0 +1,297 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQr_DD_UjvhUX3GzIfXt6IRfKm4I_joF4&callback=initMap">
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="~/Content/layout.css" rel="stylesheet" type="text/css" media="all">
+   
+</head>
+<body>
+    <body id="top">
+        <div class="wrapper row1">
+            <header id="header" class="hoc clear">
+                <h1>Payakorn</h1>
+            </header>
+        </div>
+        <div class="wrapper row4">
+            <nav id="mainav" class="hoc clear">
+                <ul class="clear">
+                    <li>Translate Lakkana</li>
+                    <li>Translate Zodiac</li>
+                    <li>View Lakkana</li>                  
+                    <li>Route to Lakkana</li>
+                    <li>View personality</li>
+                    <li>Visit CMU</li>            
+                </ul> 
+            </nav>
+        </div>
+        <div class="wrapper bgded overlay">
+            <div id="pageintro" class="hoc clear">
+            
+                    <h3 class="heading">About payakorn project </h3>
+                    <p>This project improve for forture telling. It for the people who likes the forecastion. This website will tell you about your Lakkana mapping, star zodiac and your personality. </p>                   
+               
+            </div>
+        </div>
+        <div class="wrapper row3">
+            <main class="hoc container clear">
+                <!-- main body -->
+                <!-- ################################################################################################ -->
+                <ul class="nospace group services">
+                    <li class="one_third first">
+                        <article>
+                            <i class="fa fa-clock-o">
+                                <asp:Image ImageUrl="~/App_Data/image/lakkana/TZodoacI.jpg" />
+                            </i>
+                            <h6 class="heading">Translate Map to zodiac</h6>
+                            <p> This feature will interesting for the people who wants to know<img src="" alt="" /> the zodiac. It will provide the Lakkana mapping to the user and then the user just enter the information. Then, they will know the zodiac. </p>
+                            
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article>
+                            <i class="fa fa-clock-o"></i>
+                            <h6 class="heading">Translate zodiac to map</h6>
+                            <p> This feature will interesting for the people who wants to know thier Lakkana mapping.</p>
+                           
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article>
+
+                            <i class="fa fa-clock-o"></i>
+
+                            <h6 class="heading">View Lallana map </h6>
+                            <p>
+                                <img src="~/App_Data/image/lakkana/LakkanaMap.jpg" />
+                            </p>
+                            
+
+                        </article>
+                    </li>
+
+ 
+
+
+                    <li class="one_third">
+                        <article>
+                            <i class="fa fa-clock-o"></i>
+                            <h2 style="font-family:courier ">ROUTE TO LAKKANA</h2>
+                            <div id="map" style="width: 895px; height: 400px;"></div>
+                            <script type="text/javascript">
+    var locations = [
+      ['Wat Jed Yod', 18.808307, 98.971887, 1],
+      ['Wat Phra That Doi Suthep', 18.804928, 98.922017, 2],
+      ['Wat Phra Singh', 18.788584, 98.981357, 3],
+      ['Wat Phra That Jom Thong', 18.421078, 98.679093, 4],
+      ['Wat Ket Karam', 18.792238, 99.002822, 5]
+
+
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 9,
+      center: new google.maps.LatLng(18.788584, 98.981357),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+                            </script>
+                            
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article>
+                            <i class="fa fa-clock-o"></i>
+                            <h2 style="font-family:courier ">VIEW PERSONALITY</h2>
+                            <script language="JavaScript">
+
+        function showInput() {
+
+            var selectedanswer = document.getElementById("mySelect").selectedIndex;
+
+
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Aries") {
+                greetin = "Aries";
+                greeting = "mar 21-apr 20";
+                greeting1 = "Adventurous, energetic, Pioneering, courageous, Enthusiastic, confident, Dynamic and quick-witted";
+                greeting2 = "Selfish, quick-tempered, Impulsive, impatient, Foolhardy and daredevil";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Taurus") {
+                greetin = "Taurus";
+                greeting = "apr 21-may 21";
+                greeting1 = "Patient, reliable, Warmhearted, loving, Persistent, determined, Placid and security loving";
+                greeting2 = "Jealous, possessive, Resentful, inflexible, Self-indulgent and greedy";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Gemini") {
+                greetin = "Gemini";
+                greeting = "may 22-june 21";
+                greeting1 = "Adaptable, versatile, Communicative, witty, Intellectual, eloquent, Youthful and lively";
+                greeting2 = "Nervous, tense, Superficial, inconsistent, Cunning and inquisitive";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Cancer") {
+                greetin = "Cancer";
+                greeting = "june 22-july 22";
+                greeting1 = "Emotional, loving, Intuitive, imaginative, Shrewd, cautious, Protective and sympathetic";
+                greeting2 = "Changeable, moody, Overemotional, touchy, Clinging and unable to let go";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Leo") {
+                greetin = "Leo";
+                greeting = "july 23-aug 21";
+                greeting1 = "Generous, warmhearted, Creative, enthusiastic, Broad-minded, expansive, Faithful and loving";
+                greeting2 = "Pompous, patronizing, Bossy, interfering, Dogmatic and intolerant";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Virgo") {
+                greetin = "Virgo";
+                greeting = "aug 22-sep 23";
+                greeting1 = "Modest, shy, Meticulous, reliable, Practical, diligent, Intelligent and analytical";
+                greeting2 = "Fussy, a worrier, Overcritical, harsh, Perfectionist and conservative";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Libra") {
+                greetin = "Libra";
+                greeting = "sep 24-oct 23";
+                greeting1 = "Diplomatic, urbane, Romantic, charming, Easygoing, sociable, Idealistic and peaceable";
+                greeting2 = "Indecisive, changeable, Gullible, easily-influenced, Flirtatious and self-indulgent";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Scorpio") {
+                greetin = "Scorpio";
+                greeting = "oct 24-nov 22";
+                greeting1 = "Determined, forceful, Emotional, intuitive, Powerful, passionate, Exciting and magnetic";
+                greeting2 = "Jealous, resentful, Compulsive, obsessive, Secretive and obstinate";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Sagittarius") {
+                greetin = "Sagittarius";
+                greeting = "nov 23-dec 22";
+                greeting1 = "Optimistic, freedom-loving, Jovial, good-humored, Honest, straightforward, Intellectual and philosophical";
+                greeting2 = "Blindly-optimisti, careless, Irresponsible, superficial, Tactless and restless";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Capricorn") {
+                greetin = "Capricorn";
+                greeting = "dec 23-jan 20";
+                greeting1 = "Practical, prudent, Ambitious, disciplined, careful, Patient, Humorous and reserved";
+                greeting2 = "Pessimistic, fatalistic, Miserly and grudging";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Aquarius") {
+                greetin = "Aquarius";
+                greeting = "jan 21-feb 19";
+                greeting1 = "Friendly, humanitarian, Honest, loyal, Original, inventive, Independent and intellectual";
+                greeting2 = "Intractable, contrary, Perverse, unpredictable, Unemotional and detached";
+            }
+            if (document.getElementsByTagName("option")[selectedanswer].value == "Pisces") {
+                greetin = "Pisces";
+                greeting = "feb 20-mar 20";
+                greeting1 = "Imaginative, sensitive, Compassionate, kind, Selfless, unworldly, Intuitive and sympathetic";
+                greeting2 = "Escapist, idealistic, Secretive, vague, Weak-willed and easily-led";
+            }
+
+
+
+
+            document.getElementById("dem").innerHTML = greetin;
+            document.getElementById("demo").innerHTML = greeting;
+            document.getElementById("demo1").innerHTML = greeting1;
+            document.getElementById("demo2").innerHTML = greeting2;
+            }
+                            </script>
+                                <form>
+                                    <div class="answer1wrap">
+                                        <select id="mySelect">
+                                            <option value="void">Choose your zodiac</option>
+                                            <option value="Aries">Aries</option>
+                                            <option value="Taurus">Taurus</option>
+                                            <option value="Gemini">Gemini</option>
+                                            <option value="Cancer">Cancer</option>
+                                            <option value="Leo">Leo</option>
+                                            <option value="Virgo">Virgo</option>
+                                            <option value="Libra">Libra</option>
+                                            <option value="Scorpio">Scorpio</option>
+                                            <option value="Sagittarius">Sagittarius</option>
+                                            <option value="Capricorn">Capricorn</option>
+                                            <option value="Aquarius">Aquarius</option>
+                                            <option value="Pisces">Pisces</option>
+                                        </select>
+                                    </div>
+                                </form>
+
+
+                                <h3>Your personality: </h3>
+                                <h1 id="dem"></h1>
+                                <p id="demo"></p>
+                                <p id="demo1"></p>
+                                <p id="demo2"></p>
+
+</article>
+                    </li>
+                </ul>
+                <!-- ################################################################################################ -->
+                <!-- / main body -->
+                <div class="clear"></div>
+            </main>
+        </div>
+     
+   
+        <div class="wrapper bgded overlay" );">
+            <section class="hoc container clear">
+                
+            </section>
+        </div>
+       
+        <div class="wrapper row4" >
+            <footer id="footer" class="hoc container clear">            
+                <div class="hoc container clear">
+                    <div style="background-image: url(../../App_Data/image/CMU/CAMT_LOGO_RGB_large.jpg)"></div>
+                    <img src="~/App_Data/image/CMU/CAMT_LOGO_RGB_large.jpg" />
+                    <h1 class="col-centered">Visit CMU</h1>
+                    <ul class="nospace btmspace-30 linklist">
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            <address>
+                                Chiang Mai University
+                                239, Huay Kaew Road, Muang District, Chiang Mai
+                                Thailand, 50200
+                            </address>
+                        </li>
+                        <li><i class="fa fa-phone"></i>Tel. 053-941300</li>
+                        <li><i class="fa fa-envelope-o"></i>E-mail : prcmu239@gmail.com</li>
+                        <li><i class="fa fa-envelope-o"></i><a href="https://www.http://www.cmu.ac.th/">Visit CMU Click here</a></li>
+                    </ul>
+                    
+                </div>
+                
+                
+            </footer>
+        </div>
+        <div class="wrapper row5">
+            <div id="copyright" class="hoc clear">
+                <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
+                <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+            </div>
+        </div>
+        <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+        <!-- JAVASCRIPTS -->
+       
+   
+</body>
+
