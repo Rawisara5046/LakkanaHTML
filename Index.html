@@ -10,7 +10,7 @@
   <link href="Content/layout.css" rel="stylesheet" type="text/css" media="all">
   <script src="Scripts/modernizr-2.6.2.js"></script>
   <style>
-  #itemsCard{
+    #itemsCard{
       width: 320px;
       height: 100px;
       padding: 10px;
@@ -28,7 +28,6 @@
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
-
     #Mapping {
       background-image: url("map.jpeg");
       background-size: 50%;
@@ -40,14 +39,12 @@
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
-
     .drop {
       width: 40px;
       height: 100px;
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
-
     .Zodiac {
       width: 200px;
       height: 20px;
@@ -387,6 +384,98 @@
 
 
     }
+
+    function allowDropCard(ev) {
+      ev.preventDefault();
+    }
+
+    function dragCard(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+    function dropCard(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+          if(data =="dra1"){
+            a=Math.floor((Math.random() * 4) + 1);
+            if(a==1){
+              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+            }
+            if(a==2){
+              b="The bear symbolizes a male person with whom you today will have to do something. Be friendly to this person and do not not irritate him.";
+              c="You could create an insidious enemy, if you will not take care. If problems should arise trust an official person, and most of all you must believe in your own strength!";
+            }
+            if(a==3){
+              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+            }
+            if(a==4){
+              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+            }
+          }
+          if(data =="dra2"){
+            a=Math.floor((Math.random() * 4) + 1);
+            if(a==1){
+              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+            }
+            if(a==2){
+              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+            }
+            if(a==3){
+              b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+              c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+            }
+            if(a==4){
+              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+            }
+          }
+          if(data =="dra3"){
+            a=Math.floor((Math.random() * 4) + 1);
+            if(a==1){
+              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+            }
+            if(a==2){
+              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+            }
+            if(a==3){
+              b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+              c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+            }
+            if(a==4){
+              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+            }
+          }
+          if(data =="dra4"){
+            a=Math.floor((Math.random() * 4) + 1);
+            if(a==1){
+              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+            }
+            if(a==2){
+              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+            }
+            if(a==3){
+              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+            }
+            if(a==4){
+              b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+              c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+            }
+          }
+          document.getElementById("er").innerHTML = b;
+          document.getElementById("er1").innerHTML = c;
+        }
   </script>
 </head>
 
@@ -399,7 +488,6 @@
         <h1>Payakorn</h1>
       </header>
     </div>
-
     <!-- Link to feature -->
     <div class="wrapper row4">
       <nav id="mainav" class="hoc clear">
@@ -413,7 +501,6 @@
         </ul>
       </nav>
     </div>
-
     <!-- About Payakorn -->
     <div class="wrapper bgded overlay">
       <div id="pageintro" class="hoc clear">
@@ -421,7 +508,6 @@
         <p>This project improve for forture telling. It for the people who likes the forecastion. This website will tell you about your Lakkana mapping, star zodiac and your personality. </p>
       </div>
     </div>
-
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="wrapper row3">
@@ -674,12 +760,10 @@
 
             </article>
           </li>
-<<<<<<< HEAD
           <!-- Feature 5 VIEW PERSONALITY-->
           <li class="one_third">
-=======
           <li align="center" class="one_third">
->>>>>>> origin/master
+
             <article>
               <i class="fa fa-clock-o"></i>
               <h3 style="color:black">VIEW PERSONALITY</h3>
@@ -809,99 +893,6 @@
             <article>
               <i class="fa fa-clock-o"></i>
               <h6 class="heading" style="color:black">Diary Holoscope</h6>
-              <script>
-    function allowDrop(ev) {
-      ev.preventDefault();
-    }
-
-    function drag(ev) {
-      ev.dataTransfer.setData("text", ev.target.id);
-    }
-
-    function drop(ev) {
-      ev.preventDefault();
-      var data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data));
-      if(data =="dra1"){
-        a=Math.floor((Math.random() * 4) + 1);
-        if(a==1){
-          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-        }
-        if(a==2){
-          b="The bear symbolizes a male person with whom you today will have to do something. Be friendly to this person and do not not irritate him.";
-          c="You could create an insidious enemy, if you will not take care. If problems should arise trust an official person, and most of all you must believe in your own strength!";
-        }
-        if(a==3){
-          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-        }
-        if(a==4){
-          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-        }
-      }
-      if(data =="dra2"){
-        a=Math.floor((Math.random() * 4) + 1);
-        if(a==1){
-          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-        }
-        if(a==2){
-          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-        }
-        if(a==3){
-          b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
-          c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
-        }
-        if(a==4){
-          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-        }
-      }
-      if(data =="dra3"){
-        a=Math.floor((Math.random() * 4) + 1);
-        if(a==1){
-          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-        }
-        if(a==2){
-          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-        }
-        if(a==3){
-          b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
-          c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
-        }
-        if(a==4){
-          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-        }
-      }
-      if(data =="dra4"){
-        a=Math.floor((Math.random() * 4) + 1);
-        if(a==1){
-          b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-          c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-        }
-        if(a==2){
-          b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-          c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-        }
-        if(a==3){
-          b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-          c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-        }
-        if(a==4){
-          b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
-          c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
-        }
-      }
-      document.getElementById("er").innerHTML = b;
-      document.getElementById("er1").innerHTML = c;
-    }
-    </script>
       <div>
         <table id="itemsCard" align="center">
           <tr>
@@ -921,33 +912,29 @@
           <tr>
           <td>
             <div align="center">
-              <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra1" value="1" width="80" height="100">
+              <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+                <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra1" value="1" width="80" height="100">
               </div>
             </div>
           </td>
           <td>
       <div align="center">
-        <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
-          <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra2" value="2" width="80" height="100">
+        <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+          <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra2" value="2" width="80" height="100">
         </div>
       </div>
       </td>
       <td>
         <div align="center">
-          <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
-<<<<<<< HEAD
-            <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra3" value="3 width="80" height="100"">
-=======
-            <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra3" value="3" width="80" height="100">
->>>>>>> origin/master
+          <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+            <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra3" value="3 width="80" height="100"">
           </div>
         </div>
       </td>
       <td>
           <div align="center">
-            <div id="tableCard" ondrop="drop(event)" ondragover="allowDrop(event)">
-              <img src="gipsy.jpg" draggable="true" ondragstart="drag(event)" id="dra4" value="4" width="80" height="100">
+            <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+              <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra4" value="4" width="80" height="100">
             </div>
           </div>
         </td>
@@ -955,7 +942,7 @@
       </table>
       <p align="center" style="color:black">Drag your card here!</p>
         <div align="center">
-        <div class="dropCard" ondrop="drop(event,this)" ondragover="allowDrop(event)"></div>
+        <div class="dropCard" ondrop="dropCard(event,this)" ondragover="allowDropCard(event)"></div>
       </div>
 
     <p><br> </p>
