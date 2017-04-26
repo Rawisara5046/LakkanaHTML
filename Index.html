@@ -18,8 +18,8 @@
       border: 1px solid #aaaaaa;
     }
     #tableCard{
-      width: 80px;
-      height: 100px;
+      width: 100px;
+      height: 120px;
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
@@ -769,8 +769,48 @@
               <i class="fa fa-clock-o"></i>
               <h3 style="color:black">VIEW PERSONALITY</h3>
               <script language="JavaScript">
-                function showInput() {
 
+              function changingImg(){
+  var selectedanswer = document.getElementById("mySelect").selectedIndex;
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Aries") {
+    document.getElementById("y").src="aries.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Taurus") {
+    document.getElementById("y").src="taurus.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Gemini") {
+    document.getElementById("y").src="gemini.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Cancer") {
+    document.getElementById("y").src="cancer.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Leo") {
+    document.getElementById("y").src="leo.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Virgo") {
+    document.getElementById("y").src="virgo.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Libra") {
+    document.getElementById("y").src="libra.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Scorpio") {
+    document.getElementById("y").src="scorpio.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Sagittarius") {
+    document.getElementById("y").src="sagittarius.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Capricorn") {
+    document.getElementById("y").src="capricorn.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Aquarius") {
+    document.getElementById("y").src="aquarius.jpg";
+  }
+  if (document.getElementsByTagName("option")[selectedanswer].value == "Pisces") {
+    document.getElementById("y").src="pisces.jpg";
+      }
+    }
+                function showInput() {
+                  changingImg();
                   var selectedanswer = document.getElementById("mySelect").selectedIndex;
 
 
@@ -873,7 +913,7 @@
                                             <option value="Aquarius">Aquarius</option>
                                             <option value="Pisces">Pisces</option>
                                         </select>
-                  <button style="color:white" class="btn btn-default" id="checkbtn" onclick="showInput();" type="button"><span  class="glyphicon glyphicon-check"></span>Check</button>
+                  <button style="color:black" class="btn btn-default" id="checkbtn" onclick="showInput();" type="button"><span  class="glyphicon glyphicon-check"></span>Check</button>
                 </div>
 
               </form>
@@ -882,6 +922,7 @@
 
 
               <h1 style="color:black">Your personality </h1>
+              <p align="center"><img id="y" src="zodiac1.jpg" style="width:250px;height:250px;" /></p>
               <h2 style="color:black" id="dem"></h2>
               <p style="color:black" id="demo"></p>
               <p style="color:black" id="demo1"></p>
@@ -895,7 +936,7 @@
               <i class="fa fa-clock-o"></i>
               <h6 class="heading" style="color:black">Diary Holoscope</h6>
       <div>
-        <table id="itemsCard" align="center">
+        <table id="tableCard" align="center">
           <tr>
             <td>
               <h3 align="center" style="color:black">Card 1</h3>
@@ -910,7 +951,7 @@
               <h3 align="center" style="color:black">Card 4</h3>
             </td>
           </tr>
-          <tr>
+
           <td>
             <div align="center">
               <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
@@ -943,7 +984,7 @@
       </table>
       <p align="center" style="color:black">Drag your card here!</p>
         <div align="center">
-        <div class="dropCard" ondrop="dropCard(event,this)" ondragover="allowDropCard(event)"></div>
+        <div id="tableCard" class="dropCard" ondrop="dropCard(event,this)" ondragover="allowDropCard(event)"></div>
       </div>
 
     <p><br> </p>
