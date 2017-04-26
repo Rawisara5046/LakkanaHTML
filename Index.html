@@ -11,41 +11,68 @@
   <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" media="all">
   <script src="Scripts/modernizr-2.6.2.js"></script>
   <style>
-    #itemsCard{
-      width: 320px;
-      height: 100px;
-      padding: 10px;
-      border: 1px solid #aaaaaa;
-    }
-    #tableCard{
-      width: 100px;
-      height: 120px;
-      padding: 10px;
-      border: 1px solid #aaaaaa;
-    }
     #items {
       width: 150px;
       height: 150px;
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
+
+    #itemsTon {
+      width: 100px;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+
+    #itemsCard {
+      width: 320px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+
+    #tableCard {
+      width: 100px;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+
     #Mapping {
       background-image: url("map.jpeg");
       background-size: 50%;
       background-repeat: no-repeat;
     }
-    .dropCard{
+
+    .dropCard {
       width: 80px;
       height: 100px;
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
+
     .drop {
       width: 40px;
       height: 100px;
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
+
+    .drop2 {
+      width: 25px;
+      height: 50px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+
+    .drop3 {
+      width: 100px;
+      height: 20px;
+      padding: 1px;
+      border: 1px solid #aaaaaa;
+    }
+
     .Zodiac {
       width: 200px;
       height: 20px;
@@ -391,92 +418,92 @@
     }
 
     function dragCard(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
-        }
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
 
     function dropCard(ev) {
-          ev.preventDefault();
-          var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
-          if(data =="dra1"){
-            a=Math.floor((Math.random() * 4) + 1);
-            if(a==1){
-              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-            }
-            if(a==2){
-              b="The bear symbolizes a male person with whom you today will have to do something. Be friendly to this person and do not not irritate him.";
-              c="You could create an insidious enemy, if you will not take care. If problems should arise trust an official person, and most of all you must believe in your own strength!";
-            }
-            if(a==3){
-              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-            }
-            if(a==4){
-              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-            }
-          }
-          if(data =="dra2"){
-            a=Math.floor((Math.random() * 4) + 1);
-            if(a==1){
-              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-            }
-            if(a==2){
-              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-            }
-            if(a==3){
-              b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
-              c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
-            }
-            if(a==4){
-              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-            }
-          }
-          if(data =="dra3"){
-            a=Math.floor((Math.random() * 4) + 1);
-            if(a==1){
-              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-            }
-            if(a==2){
-              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-            }
-            if(a==3){
-              b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
-              c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
-            }
-            if(a==4){
-              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-            }
-          }
-          if(data =="dra4"){
-            a=Math.floor((Math.random() * 4) + 1);
-            if(a==1){
-              b="Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
-              c="You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
-            }
-            if(a==2){
-              b="If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
-              c="If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
-            }
-            if(a==3){
-              b="Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
-              c="Today you will feel strong and full of energy. Find time today for a new vacation destination.";
-            }
-            if(a==4){
-              b="Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
-              c="Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
-            }
-          }
-          document.getElementById("er").innerHTML = b;
-          document.getElementById("er1").innerHTML = c;
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+      if (data == "dra1") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
         }
+        if (a == 2) {
+          b = "The bear symbolizes a male person with whom you today will have to do something. Be friendly to this person and do not not irritate him.";
+          c = "You could create an insidious enemy, if you will not take care. If problems should arise trust an official person, and most of all you must believe in your own strength!";
+        }
+        if (a == 3) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if (a == 4) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+      }
+      if (data == "dra2") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if (a == 2) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if (a == 3) {
+          b = "Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c = "Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+        if (a == 4) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+      }
+      if (data == "dra3") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if (a == 2) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if (a == 3) {
+          b = "Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c = "Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+        if (a == 4) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+      }
+      if (data == "dra4") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if (a == 2) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if (a == 3) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if (a == 4) {
+          b = "Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c = "Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+      }
+      document.getElementById("er").innerHTML = b;
+      document.getElementById("er1").innerHTML = c;
+    }
   </script>
 </head>
 
@@ -520,7 +547,7 @@
               <i class="fa fa-clock-o" style="background-image:url(App_Data/image/lakkana/TZodoacI.jpg); background-size:70%; background-repeat:no-repeat;background-position: center; "></i>
               <h6 class="heading">Translate Map to zodiac</h6>
               <p> This feature will interesting for the people who wants to know<img src="" alt="" /> the zodiac. It will provide the Lakkana mapping to the user and then the user just enter the information. Then, they will know the zodiac. </p>
-                  <img src="map.jpeg" style="width:500px;height:500px;">
+              <img src="map.jpeg" style="width:500px;height:500px;">
               <table align="center">
                 <tr>
                   <td>
@@ -596,105 +623,105 @@
                   </td>
                 </tr>
               </table>
-          <br><br><br>
-          <table border="1px" align="center">
-            <tr>
-              <td>
-                Aries
-              </td>
-              <td>
-                <div id="Aries" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Pisces
-              </td>
-              <td>
-                <div id="Pisces" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Aquarius
-              </td>
-              <td>
-                <div id="Aquarius" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Capricorn
-              </td>
-              <td>
-                <div id="Capricorn" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Sagittarius
-              </td>
-              <td>
-                <div id="Sagittarius" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Scorpio
-              </td>
-              <td>
-                <div id="Scorpio" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Libra
-              </td>
-              <td>
-                <div id="Libra" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Virgo
-              </td>
-              <td>
-                <div id="Virgo" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Leo
-              </td>
-              <td>
-                <div id="Leo" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Cancer
-              </td>
-              <td>
-                <div id="Cancer" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Gemini
-              </td>
-              <td>
-                <div id="Gemini" class="Zodiac"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Taurus
-              </td>
-              <td>
-                <div id="Taurus" class="Zodiac"></div>
-              </td>
-            </tr>
-          </table>
+              <br><br><br>
+              <table border="1px" align="center">
+                <tr>
+                  <td>
+                    Aries
+                  </td>
+                  <td>
+                    <div id="Aries" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Pisces
+                  </td>
+                  <td>
+                    <div id="Pisces" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Aquarius
+                  </td>
+                  <td>
+                    <div id="Aquarius" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Capricorn
+                  </td>
+                  <td>
+                    <div id="Capricorn" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Sagittarius
+                  </td>
+                  <td>
+                    <div id="Sagittarius" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Scorpio
+                  </td>
+                  <td>
+                    <div id="Scorpio" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Libra
+                  </td>
+                  <td>
+                    <div id="Libra" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Virgo
+                  </td>
+                  <td>
+                    <div id="Virgo" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Leo
+                  </td>
+                  <td>
+                    <div id="Leo" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Cancer
+                  </td>
+                  <td>
+                    <div id="Cancer" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Gemini
+                  </td>
+                  <td>
+                    <div id="Gemini" class="Zodiac"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Taurus
+                  </td>
+                  <td>
+                    <div id="Taurus" class="Zodiac"></div>
+                  </td>
+                </tr>
+              </table>
             </article>
           </li>
           <!--Feature 2 Table To Map -->
@@ -704,7 +731,219 @@
               <h6 class="heading">Translate zodiac to map</h6>
               <p> This feature will interesting for the people who wants to know thier Lakkana mapping.</p>
               <!-- Add TON code hear -->
-
+              <table align="center">
+                <tr>
+                  <td>
+                    <table>
+                      <tr>
+                        <td>
+                          11
+                          <div class="drop2" id="11." value="one" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          12
+                          <div class="drop2" id="12." value="two" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          1
+                          <div class="drop2" id="1." value="three" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          2
+                          <div class="drop2" id="2." value="four" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          3
+                          <div class="drop2" id="3." value="five" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> </td>
+                        <td>
+                          10
+                          <div class="drop2" id="10." value="six" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          13
+                          <div class="drop2" id="13." value="seven" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td colspan="2">
+                          4
+                          <div class="drop2" id="4." value="eight" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          9
+                          <div class="drop2" id="9." value="nine" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          8
+                          <div class="drop2" id="8." value="ten" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          7
+                          <div class="drop2" id="7." value="eleven" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          6
+                          <div class="drop2" id="6." value="twelve" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                        <td>
+                          5
+                          <div class="drop2" id="5." value="thirteen" <textarea>
+                            </textarea>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <img src="map.jpeg" style="width:300px;height:300px;">
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <br>
+              <table align="center">
+                <td>
+                  <table>
+                    <tr>
+                      <Td>
+                        <TH>Aries</TH>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Aries1" value="ones" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <TH>Taurus</TH>
+                      </Td>
+                      <Td>
+                        <div class="drop3" id="Taurus1" value="twos" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <TH>Gemini</TH>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Gemini1" value="threes" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <TH>Cancer</TH>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Cancer1" value="fours" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Leo</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Leo1" value="fives" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Virgo</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Virgo1" value="sixs" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Libra</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Libra1" value="sevens" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Scorpio</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Scorpio1" value="eigths" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Sagitarius</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Sagitarius1" value="nines" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Capricornus</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Capricornus1" value="tens" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Aquarius</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Aquarius1" value="elevens" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <th>Pisces</th>
+                      </td>
+                      <td>
+                        <div class="drop3" id="Pisces1" value="twelves" ondrop="dropTon(event,this)" ondragover="allowDropTon(event)"></div>
+                      </td>
+                    </tr>
+                  </table>
+                  <td>
+                    <div id="itemsTon" ondrop="dropTon(event)" ondragover="allowDropTon(event)">
+                      <img src="App_Data/image/lakkana/1.png" draggable="true" ondragstart="dragTon(event)" id="dd1" value="1" width="30" height="30">
+                      <img src="App_Data/image/lakkana/2.png" draggable="true" ondragstart="dragTon(event)" id="dd2" value="2" width="30" height="30">
+                      <img src="App_Data/image/lakkana/3.png" draggable="true" ondragstart="dragTon(event)" id="dd3" value="3" width="30" height="30">
+                      <img src="App_Data/image/lakkana/4.png" draggable="true" ondragstart="dragTon(event)" id="dd4" value="4" width="30" height="30">
+                      <img src="App_Data/image/lakkana/5.png" draggable="true" ondragstart="dragTon(event)" id="dd5" value="5" width="30" height="30">
+                      <img src="App_Data/image/lakkana/6.png" draggable="true" ondragstart="dragTon(event)" id="dd6" value="6" width="30" height="30">
+                      <img src="App_Data/image/lakkana/7.png" draggable="true" ondragstart="dragTon(event)" id="dd7" value="7" width="30" height="30">
+                      <img src="App_Data/image/lakkana/8.png" draggable="true" ondragstart="dragTon(event)" id="dd8" value="8" width="30" height="30">
+                      <img src="App_Data/image/lakkana/9.png" draggable="true" ondragstart="dragTon(event)" id="dd9" value="9" width="30" height="30">
+                      <img src="l.png" draggable="true" ondragstart="dragTon(event)" id="dd10" value="ล" width="30" height="30">
+                    </div>
+                  </td>
+              </table>
             </article>
           </li>
           <!-- Ftature 3 View Map -->
@@ -763,142 +1002,142 @@
           </li>
           <!-- Feature 5 VIEW PERSONALITY-->
           <li class="one_third">
-          <li align="center" class="one_third">
+            <li align="center" class="one_third">
 
-            <article>
-              <i class="fa fa-clock-o"></i>
-              <h3 style="color:black">VIEW PERSONALITY</h3>
-              <script language="JavaScript">
-
-              function changingImg(){
-  var selectedanswer = document.getElementById("mySelect").selectedIndex;
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Aries") {
-    document.getElementById("y").src="aries.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Taurus") {
-    document.getElementById("y").src="taurus.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Gemini") {
-    document.getElementById("y").src="gemini.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Cancer") {
-    document.getElementById("y").src="cancer.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Leo") {
-    document.getElementById("y").src="leo.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Virgo") {
-    document.getElementById("y").src="virgo.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Libra") {
-    document.getElementById("y").src="libra.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Scorpio") {
-    document.getElementById("y").src="scorpio.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Sagittarius") {
-    document.getElementById("y").src="sagittarius.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Capricorn") {
-    document.getElementById("y").src="capricorn.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Aquarius") {
-    document.getElementById("y").src="aquarius.jpg";
-  }
-  if (document.getElementsByTagName("option")[selectedanswer].value == "Pisces") {
-    document.getElementById("y").src="pisces.jpg";
-      }
-    }
-                function showInput() {
-                  changingImg();
-                  var selectedanswer = document.getElementById("mySelect").selectedIndex;
-
-
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Aries") {
-                    greetin = "Aries";
-                    greeting = "mar 21-apr 20";
-                    greeting1 = "Adventurous, energetic, Pioneering, courageous, Enthusiastic, confident, Dynamic and quick-witted";
-                    greeting2 = "Selfish, quick-tempered, Impulsive, impatient, Foolhardy and daredevil";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Taurus") {
-                    greetin = "Taurus";
-                    greeting = "apr 21-may 21";
-                    greeting1 = "Patient, reliable, Warmhearted, loving, Persistent, determined, Placid and security loving";
-                    greeting2 = "Jealous, possessive, Resentful, inflexible, Self-indulgent and greedy";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Gemini") {
-                    greetin = "Gemini";
-                    greeting = "may 22-june 21";
-                    greeting1 = "Adaptable, versatile, Communicative, witty, Intellectual, eloquent, Youthful and lively";
-                    greeting2 = "Nervous, tense, Superficial, inconsistent, Cunning and inquisitive";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Cancer") {
-                    greetin = "Cancer";
-                    greeting = "june 22-july 22";
-                    greeting1 = "Emotional, loving, Intuitive, imaginative, Shrewd, cautious, Protective and sympathetic";
-                    greeting2 = "Changeable, moody, Overemotional, touchy, Clinging and unable to let go";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Leo") {
-                    greetin = "Leo";
-                    greeting = "july 23-aug 21";
-                    greeting1 = "Generous, warmhearted, Creative, enthusiastic, Broad-minded, expansive, Faithful and loving";
-                    greeting2 = "Pompous, patronizing, Bossy, interfering, Dogmatic and intolerant";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Virgo") {
-                    greetin = "Virgo";
-                    greeting = "aug 22-sep 23";
-                    greeting1 = "Modest, shy, Meticulous, reliable, Practical, diligent, Intelligent and analytical";
-                    greeting2 = "Fussy, a worrier, Overcritical, harsh, Perfectionist and conservative";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Libra") {
-                    greetin = "Libra";
-                    greeting = "sep 24-oct 23";
-                    greeting1 = "Diplomatic, urbane, Romantic, charming, Easygoing, sociable, Idealistic and peaceable";
-                    greeting2 = "Indecisive, changeable, Gullible, easily-influenced, Flirtatious and self-indulgent";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Scorpio") {
-                    greetin = "Scorpio";
-                    greeting = "oct 24-nov 22";
-                    greeting1 = "Determined, forceful, Emotional, intuitive, Powerful, passionate, Exciting and magnetic";
-                    greeting2 = "Jealous, resentful, Compulsive, obsessive, Secretive and obstinate";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Sagittarius") {
-                    greetin = "Sagittarius";
-                    greeting = "nov 23-dec 22";
-                    greeting1 = "Optimistic, freedom-loving, Jovial, good-humored, Honest, straightforward, Intellectual and philosophical";
-                    greeting2 = "Blindly-optimisti, careless, Irresponsible, superficial, Tactless and restless";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Capricorn") {
-                    greetin = "Capricorn";
-                    greeting = "dec 23-jan 20";
-                    greeting1 = "Practical, prudent, Ambitious, disciplined, careful, Patient, Humorous and reserved";
-                    greeting2 = "Pessimistic, fatalistic, Miserly and grudging";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Aquarius") {
-                    greetin = "Aquarius";
-                    greeting = "jan 21-feb 19";
-                    greeting1 = "Friendly, humanitarian, Honest, loyal, Original, inventive, Independent and intellectual";
-                    greeting2 = "Intractable, contrary, Perverse, unpredictable, Unemotional and detached";
-                  }
-                  if (document.getElementsByTagName("option")[selectedanswer].value == "Pisces") {
-                    greetin = "Pisces";
-                    greeting = "feb 20-mar 20";
-                    greeting1 = "Imaginative, sensitive, Compassionate, kind, Selfless, unworldly, Intuitive and sympathetic";
-                    greeting2 = "Escapist, idealistic, Secretive, vague, Weak-willed and easily-led";
+              <article>
+                <i class="fa fa-clock-o"></i>
+                <h3 style="color:black">VIEW PERSONALITY</h3>
+                <script language="JavaScript">
+                  function changingImg() {
+                    var selectedanswer = document.getElementById("mySelect").selectedIndex;
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Aries") {
+                      document.getElementById("y").src = "aries.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Taurus") {
+                      document.getElementById("y").src = "taurus.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Gemini") {
+                      document.getElementById("y").src = "gemini.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Cancer") {
+                      document.getElementById("y").src = "cancer.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Leo") {
+                      document.getElementById("y").src = "leo.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Virgo") {
+                      document.getElementById("y").src = "virgo.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Libra") {
+                      document.getElementById("y").src = "libra.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Scorpio") {
+                      document.getElementById("y").src = "scorpio.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Sagittarius") {
+                      document.getElementById("y").src = "sagittarius.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Capricorn") {
+                      document.getElementById("y").src = "capricorn.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Aquarius") {
+                      document.getElementById("y").src = "aquarius.jpg";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Pisces") {
+                      document.getElementById("y").src = "pisces.jpg";
+                    }
                   }
 
+                  function showInput() {
+                    changingImg();
+                    var selectedanswer = document.getElementById("mySelect").selectedIndex;
+
+
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Aries") {
+                      greetin = "Aries";
+                      greeting = "mar 21-apr 20";
+                      greeting1 = "Adventurous, energetic, Pioneering, courageous, Enthusiastic, confident, Dynamic and quick-witted";
+                      greeting2 = "Selfish, quick-tempered, Impulsive, impatient, Foolhardy and daredevil";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Taurus") {
+                      greetin = "Taurus";
+                      greeting = "apr 21-may 21";
+                      greeting1 = "Patient, reliable, Warmhearted, loving, Persistent, determined, Placid and security loving";
+                      greeting2 = "Jealous, possessive, Resentful, inflexible, Self-indulgent and greedy";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Gemini") {
+                      greetin = "Gemini";
+                      greeting = "may 22-june 21";
+                      greeting1 = "Adaptable, versatile, Communicative, witty, Intellectual, eloquent, Youthful and lively";
+                      greeting2 = "Nervous, tense, Superficial, inconsistent, Cunning and inquisitive";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Cancer") {
+                      greetin = "Cancer";
+                      greeting = "june 22-july 22";
+                      greeting1 = "Emotional, loving, Intuitive, imaginative, Shrewd, cautious, Protective and sympathetic";
+                      greeting2 = "Changeable, moody, Overemotional, touchy, Clinging and unable to let go";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Leo") {
+                      greetin = "Leo";
+                      greeting = "july 23-aug 21";
+                      greeting1 = "Generous, warmhearted, Creative, enthusiastic, Broad-minded, expansive, Faithful and loving";
+                      greeting2 = "Pompous, patronizing, Bossy, interfering, Dogmatic and intolerant";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Virgo") {
+                      greetin = "Virgo";
+                      greeting = "aug 22-sep 23";
+                      greeting1 = "Modest, shy, Meticulous, reliable, Practical, diligent, Intelligent and analytical";
+                      greeting2 = "Fussy, a worrier, Overcritical, harsh, Perfectionist and conservative";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Libra") {
+                      greetin = "Libra";
+                      greeting = "sep 24-oct 23";
+                      greeting1 = "Diplomatic, urbane, Romantic, charming, Easygoing, sociable, Idealistic and peaceable";
+                      greeting2 = "Indecisive, changeable, Gullible, easily-influenced, Flirtatious and self-indulgent";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Scorpio") {
+                      greetin = "Scorpio";
+                      greeting = "oct 24-nov 22";
+                      greeting1 = "Determined, forceful, Emotional, intuitive, Powerful, passionate, Exciting and magnetic";
+                      greeting2 = "Jealous, resentful, Compulsive, obsessive, Secretive and obstinate";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Sagittarius") {
+                      greetin = "Sagittarius";
+                      greeting = "nov 23-dec 22";
+                      greeting1 = "Optimistic, freedom-loving, Jovial, good-humored, Honest, straightforward, Intellectual and philosophical";
+                      greeting2 = "Blindly-optimisti, careless, Irresponsible, superficial, Tactless and restless";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Capricorn") {
+                      greetin = "Capricorn";
+                      greeting = "dec 23-jan 20";
+                      greeting1 = "Practical, prudent, Ambitious, disciplined, careful, Patient, Humorous and reserved";
+                      greeting2 = "Pessimistic, fatalistic, Miserly and grudging";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Aquarius") {
+                      greetin = "Aquarius";
+                      greeting = "jan 21-feb 19";
+                      greeting1 = "Friendly, humanitarian, Honest, loyal, Original, inventive, Independent and intellectual";
+                      greeting2 = "Intractable, contrary, Perverse, unpredictable, Unemotional and detached";
+                    }
+                    if (document.getElementsByTagName("option")[selectedanswer].value == "Pisces") {
+                      greetin = "Pisces";
+                      greeting = "feb 20-mar 20";
+                      greeting1 = "Imaginative, sensitive, Compassionate, kind, Selfless, unworldly, Intuitive and sympathetic";
+                      greeting2 = "Escapist, idealistic, Secretive, vague, Weak-willed and easily-led";
+                    }
 
 
 
-                  document.getElementById("dem").innerHTML = greetin;
-                  document.getElementById("demo").innerHTML = greeting;
-                  document.getElementById("demo1").innerHTML = greeting1;
-                  document.getElementById("demo2").innerHTML = greeting2;
-                }
-              </script>
-              <form>
-                <div class="answer1wrap">
-                  <select id="mySelect" , style="width: 150px" ;>
+
+                    document.getElementById("dem").innerHTML = greetin;
+                    document.getElementById("demo").innerHTML = greeting;
+                    document.getElementById("demo1").innerHTML = greeting1;
+                    document.getElementById("demo2").innerHTML = greeting2;
+                  }
+                </script>
+                <form>
+                  <div class="answer1wrap">
+                    <select id="mySelect" , style="width: 150px" ;>
                                             <option value="void">Choose your zodiac</option>
                                             <option value="Aries">Aries</option>
                                             <option value="Taurus">Taurus</option>
@@ -913,87 +1152,87 @@
                                             <option value="Aquarius">Aquarius</option>
                                             <option value="Pisces">Pisces</option>
                                         </select>
-                  <button style="color:black" class="btn btn-default" id="checkbtn" onclick="showInput();" type="button"><span  class="glyphicon glyphicon-check"></span>Check</button>
-                </div>
+                    <button style="color:black" class="btn btn-default" id="checkbtn" onclick="showInput();" type="button"><span  class="glyphicon glyphicon-check"></span>Check</button>
+                  </div>
 
-              </form>
-
-
+                </form>
 
 
-              <h1 style="color:black">Your personality </h1>
-              <p align="center"><img id="y" src="zodiac1.jpg" style="width:250px;height:250px;" /></p>
-              <h2 style="color:black" id="dem"></h2>
-              <p style="color:black" id="demo"></p>
-              <p style="color:black" id="demo1"></p>
-              <p style="color:black" id="demo2"></p>
 
-            </article>
-          </li>
-          <!-- Feature 6 Gypsy-->
-          <li class="one_third">
-            <article>
-              <i class="fa fa-clock-o"></i>
-              <h6 class="heading" style="color:black">Diary Holoscope</h6>
-      <div>
-        <table id="tableCard" align="center">
-          <tr>
-            <td>
-              <h3 align="center" style="color:black">Card 1</h3>
-            </td>
-            <td>
-              <h3 align="center" style="color:black">Card 2</h3>
-            </td>
-            <td>
-              <h3 align="center" style="color:black">Card 3</h3>
-            </td>
-            <td>
-              <h3 align="center" style="color:black">Card 4</h3>
-            </td>
-          </tr>
 
-          <td>
-            <div align="center">
-              <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
-                <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra1" value="1" width="80" height="100">
-              </div>
-            </div>
-          </td>
-          <td>
-      <div align="center">
-        <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
-          <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra2" value="2" width="80" height="100">
-        </div>
-      </div>
-      </td>
-      <td>
-        <div align="center">
-          <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
-            <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra3" value="3 width="80" height="100"">
-          </div>
-        </div>
-      </td>
-      <td>
-          <div align="center">
-            <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
-              <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra4" value="4" width="80" height="100">
-            </div>
-          </div>
-        </td>
-      </tr>
-      </table>
-      <p align="center" style="color:black">Drag your card here!</p>
-        <div align="center">
-        <div id="tableCard" class="dropCard" ondrop="dropCard(event,this)" ondragover="allowDropCard(event)"></div>
-      </div>
+                <h1 style="color:black">Your personality </h1>
+                <p align="center"><img id="y" src="zodiac1.jpg" style="width:250px;height:250px;" /></p>
+                <h2 style="color:black" id="dem"></h2>
+                <p style="color:black" id="demo"></p>
+                <p style="color:black" id="demo1"></p>
+                <p style="color:black" id="demo2"></p>
 
-    <p><br> </p>
-    <h3 align="center" style="color:black">What's you will found today....</h3>
-    <p align="center" id="er" style="color:black"></p>
-    <p align="center" id="er1" style="color:black"></p>
-    <FORM align="center">
-      <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
-      </FORM>
+              </article>
+            </li>
+            <!-- Feature 6 Gypsy-->
+            <li class="one_third">
+              <article>
+                <i class="fa fa-clock-o"></i>
+                <h6 class="heading" style="color:black">Diary Holoscope</h6>
+                <div>
+                  <table id="tableCard" align="center">
+                    <tr>
+                      <td>
+                        <h3 align="center" style="color:black">Card 1</h3>
+                      </td>
+                      <td>
+                        <h3 align="center" style="color:black">Card 2</h3>
+                      </td>
+                      <td>
+                        <h3 align="center" style="color:black">Card 3</h3>
+                      </td>
+                      <td>
+                        <h3 align="center" style="color:black">Card 4</h3>
+                      </td>
+                    </tr>
+
+                    <td>
+                      <div align="center">
+                        <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+                          <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra1" value="1" width="80" height="100">
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div align="center">
+                        <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+                          <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra2" value="2" width="80" height="100">
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div align="center">
+                        <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+                          <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra3" value="3 width=" 80 " height="100 "">
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div align="center">
+                        <div id="tableCard" ondrop="dropCard(event)" ondragover="allowDropCard(event)">
+                          <img src="gipsy.jpg" draggable="true" ondragstart="dragCard(event)" id="dra4" value="4" width="80" height="100">
+                        </div>
+                      </div>
+                    </td>
+                    </tr>
+                  </table>
+                  <p align="center" style="color:black">Drag your card here!</p>
+                  <div align="center">
+                    <div id="tableCard" class="dropCard" ondrop="dropCard(event,this)" ondragover="allowDropCard(event)"></div>
+                  </div>
+
+                  <p><br> </p>
+                  <h3 align="center" style="color:black">What's you will found today....</h3>
+                  <p align="center" id="er" style="color:black"></p>
+                  <p align="center" id="er1" style="color:black"></p>
+                  <FORM align="center">
+                    <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+                  </FORM>
         </ul>
         <!-- ################################################################################################ -->
         <!-- / main body -->
