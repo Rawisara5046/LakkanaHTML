@@ -422,7 +422,7 @@
     }
 
     function dropCard(ev) {
-
+<<<<<<< HEAD
           ev.preventDefault();
           var data = ev.dataTransfer.getData("text");
           ev.target.appendChild(document.getElementById(data));
@@ -520,7 +520,89 @@
           }
           document.getElementById("er").innerHTML = b;
           document.getElementById("er1").innerHTML = c;
-
+=======
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+      if (data == "dra1") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if (a == 2) {
+          b = "The bear symbolizes a male person with whom you today will have to do something. Be friendly to this person and do not not irritate him.";
+          c = "You could create an insidious enemy, if you will not take care. If problems should arise trust an official person, and most of all you must believe in your own strength!";
+        }
+        if (a == 3) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if (a == 4) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+      }
+      if (data == "dra2") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if (a == 2) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if (a == 3) {
+          b = "Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c = "Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+        if (a == 4) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+>>>>>>> origin/master
+        }
+      }
+      if (data == "dra3") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if (a == 2) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if (a == 3) {
+          b = "Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c = "Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+        if (a == 4) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+      }
+      if (data == "dra4") {
+        a = Math.floor((Math.random() * 4) + 1);
+        if (a == 1) {
+          b = "Today is a day on which you must make a very important decision for you. Do not push yourself from it, weigh up the possibilities and consequences from your decision.";
+          c = "You have either the choice to leave things as they are and to close your eyes, or finally make a change. The decision is very difficult for you, but also very important for your future.";
+        }
+        if (a == 2) {
+          b = "If you are a woman, then this day will bring you a dispute. You will be so confident of yourself that it'll be a kind of self-love. You will try enforce your opinion and your will at any price.";
+          c = "If you are a man, then today you will predominantly focus on on your wife / partner / girlfriend. Maybe today you will make a spontaneous small trip.";
+        }
+        if (a == 3) {
+          b = "Today you will feel free like a fish in water. Most likely it will be a rainy day today, but for your good mood this does not mind.";
+          c = "Today you will feel strong and full of energy. Find time today for a new vacation destination.";
+        }
+        if (a == 4) {
+          b = "Today discussions can get out of hand. By using the wrong words you can hurt someone. You can use your own words demonstrate power or help with your knowledge other people.";
+          c = "Just hold your fire, even if you know that you are right, and you can save a lot of energy and you will not get into unnecessary trouble.";
+        }
+      }
+      document.getElementById("er").innerHTML = b;
+      document.getElementById("er1").innerHTML = c;
     }
   </script>
 </head>
@@ -1244,7 +1326,7 @@
                     <div id="tableCard" class="dropCard" ondrop="dropCard(event,this)" ondragover="allowDropCard(event)"></div>
                   </div>
 
-
+<<<<<<< HEAD
     <p><br> </p>
     <h3 align="center" style="color:black">What's you will found today....</h3>
     <p align="center"><img id="bbb" src="noback.png" style="width:120px;height:140px;" /></p>
@@ -1253,6 +1335,15 @@
     <FORM align="center">
       <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
       </FORM>
+=======
+                  <p><br> </p>
+                  <h3 align="center" style="color:black">What's you will found today....</h3>
+                  <p align="center" id="er" style="color:black"></p>
+                  <p align="center" id="er1" style="color:black"></p>
+                  <FORM align="center">
+                    <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+                  </FORM>
+>>>>>>> origin/master
         </ul>
         <!-- ################################################################################################ -->
         <!-- / main body -->
